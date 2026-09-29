@@ -1,0 +1,126 @@
+/* Retro Windows 95/98 Aesthetic Styling */
+body {
+    background-color: #b90000; /* Classic Teal Desktop Background */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    user-select: none;
+}
+
+.window {
+    background-color: #c0c0c0;
+    border: 3px solid;
+    border-color: #fff #0a0a0a #0a0a0a #fff; /* Outward bevel */
+    padding: 6px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.title-bar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    padding: 3px 6px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+/* Outer border bevels for the main dashboard and grid */
+.game-container {
+    border: 3px solid;
+    border-color: #0a0a0a #fff #fff #0a0a0a; /* Inward bevel */
+    background-color: #c0c0c0;
+    padding: 6px;
+}
+
+/* Top panel containing mine counter, smiley button, and timer */
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid;
+    border-color: #0a0a0a #fff #fff #0a0a0a;
+    padding: 4px 8px;
+    margin-bottom: 6px;
+    background-color: #c0c0c0;
+}
+
+.digital-display {
+    background-color: #000;
+    color: #ff0000;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 2px 6px;
+    border: 2px solid;
+    border-color: #808080 #fff #fff #808080;
+    min-width: 40px;
+    text-align: right;
+}
+
+.smiley-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    background-color: #c0c0c0;
+    border: 3px solid;
+    border-color: #fff #0a0a0a #0a0a0a #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.smiley-btn:active {
+    border-color: #0a0a0a #fff #fff #0a0a0a;
+}
+
+/* Minesweeper Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 24px); /* 9 columns wide */
+    grid-template-rows: repeat(9, 24px);    /* 9 rows deep */
+    border: 3px solid;
+    border-color: #808080 #fff #fff #808080;
+    background-color: #808080;
+}
+
+/* Individual Unrevealed Tiles */
+.cell {
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    border: 3px solid;
+    border-color: #fff #808080 #808080 #fff; /* Distinct 3D pop appearance */
+    background-color: #c0c0c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Flat, revealed tiles */
+.cell.revealed {
+    border: 1px solid #808080;
+    background-color: #c0c0c0;
+}
+
+.cell.mine {
+    background-color: #ff0000;
+}
+
+/* Classic Windows Color Mapping for Proximity Numbers */
+.cell[data-count="1"] { color: #0000ff; } /* Blue */
+.cell[data-count="2"] { color: #008000; } /* Green */
+.cell[data-count="3"] { color: #ff0000; } /* Red */
+.cell[data-count="4"] { color: #000080; } /* Dark Blue */
+.cell[data-count="5"] { color: #800000; } /* Maroon */
+.cell[data-count="6"] { color: #008080; } /* Turquoise */
+.cell[data-count="7"] { color: #000000; } /* Black */
+.cell[data-count="8"] { color: #808080; } /* Gray */
